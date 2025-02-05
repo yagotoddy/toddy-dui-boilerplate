@@ -21,7 +21,7 @@ RegisterCommand('change-url-testing',function()
 
   local page = toogle and 'page-one.html' or 'index.html'
   dui:changeUrl('https://cfx-nui-'..GetCurrentResourceName()..'/web/'..page)
-end)
+end,false)
 
 AddEventHandler('onClientResourceStart', function(resName)
   if resName ~= GetCurrentResourceName() then return end
